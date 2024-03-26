@@ -1,5 +1,6 @@
 import flet as ft
 
+
 class View(object):
     def __init__(self, page):
         self._page = page
@@ -12,7 +13,9 @@ class View(object):
         self._titolo = ft.Text("Indovina il numero",
                                color="blue", size=24)
 
-    def setController(self,controller):
+        self._page.add(self._titolo)
+
+    def setController(self, controller):
         self._controller = controller
 
     def update(self):
